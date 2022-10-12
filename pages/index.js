@@ -2,9 +2,11 @@ import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="home ">
       <Navbar />
-      this is homepage
+      <div className='h-screen bg-gray-700'>
+        this is homepage
+      </div>
     </div>
   )
 }
