@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -12,15 +13,15 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="/">Home</a></li>
-          <li><a className="text-sm text-blue-600 font-bold" href="#">About Us</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
-          <li><a className="text-sm text-gray-400 hover:text-gray-500" href="/contactFaculty">Contact</a></li>
+        <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+          <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="/">Home</a></li></Link>
+          <Link href='/'><li><a className="text-sm text-blue-600 font-bold" href="#">About Us</a></li></Link>
+          <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li></Link>
+          <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li></Link>
+          <Link href='/contactFaculty'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="/contactFaculty">Contact</a></li></Link>
         </ul>
-        <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign In</a>
-        <a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+        <Link href='/logIn'><a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Log In</a></Link>
+        <Link href='/signUp'><a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a></Link>
       </nav>
       <div className="navbar-menu relative z-50 hidden">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -34,28 +35,28 @@ const Navbar = () => {
           </div>
           <div>
             <ul>
-              <li className="mb-1">
+              <Link href='/'><li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
-              </li>
-              <li className="mb-1">
+              </li></Link>
+              <Link href='/'><li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
-              </li>
-              <li className="mb-1">
+              </li></Link>
+              <Link href='/'><li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
-              </li>
-              <li className="mb-1">
+              </li></Link>
+              <Link href='/'><li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
-              </li>
-              <li className="mb-1">
+              </li></Link>
+              <Link href='/contactFaculty'><li className="mb-1">
                 <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
-              </li>
+              </li></Link>
             </ul>
           </div>
 
           <div className="mt-auto">
             <div className="pt-6">
-              <a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
-              <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+              <Link href='/logIn'><a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Log in</a></Link>
+              <Link href='/signUp'><a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a></Link>
             </div>
           </div>
         </nav>
