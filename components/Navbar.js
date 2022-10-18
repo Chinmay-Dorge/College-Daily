@@ -1,7 +1,9 @@
 import React from "react";
 import Link from 'next/link'
+import {useSession , signIn , signOut } from 'next-auth/react';
 
 const Navbar = () => {
+  const { data: session, status } = useSession();
   return (
     <div>
       <nav className="relative px-4 py-4 flex justify-between items-center bg-gray-800">
@@ -14,14 +16,23 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-          <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="/">Home</a></li></Link>
+          <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li></Link>
           <Link href='/'><li><a className="text-sm text-blue-600 font-bold" href="#">About Us</a></li></Link>
           <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li></Link>
           <Link href='/'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li></Link>
-          <Link href='/contactFaculty'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="/contactFaculty">Contact</a></li></Link>
+          <Link href='/contactFaculty'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#" >Contact</a></li></Link>
         </ul>
-        <Link href='/logIn'><a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Log In</a></Link>
-        <Link href='/signUp'><a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a></Link>
+        {
+          !session && status !== 'authenticated' && (
+            <>
+              <button onClick={()=>signIn()} className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl">Login</button>            </>
+          )
+        }
+        {
+          session && status !== 'unauthenticated' && (
+            <button onClick={()=>signOut()} className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl">SignOut</button>
+          )
+        }
       </nav>
       <div className="navbar-menu relative z-50 hidden">
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -55,8 +66,8 @@ const Navbar = () => {
 
           <div className="mt-auto">
             <div className="pt-6">
-              <Link href='/logIn'><a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Log in</a></Link>
-              <Link href='/signUp'><a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a></Link>
+              <button onClick={()=>signIn()} className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl">Login</button>
+              <button className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl">Sign Up</button>
             </div>
           </div>
         </nav>
