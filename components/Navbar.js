@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link href='/contactFaculty'><li><a className="text-sm text-gray-400 hover:text-gray-500" href="#" >Contact</a></li></Link>
         </ul>
         {
-          !session && status !== 'authenticated' && (
+          !session && status !== 'authenticated' && ( // if signed in
             <>
               <button onClick={()=>signIn()} className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl">Login</button>            </>
           )

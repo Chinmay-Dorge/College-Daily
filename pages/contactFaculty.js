@@ -2,8 +2,7 @@ import React from 'react'
 import FacultyCard from '../components/FacultyCard'
 import Navbar from '../components/Navbar'
 
-
-const contactFaculty = () => {
+export default function ContactFaculty() {
     return (
         <div className='bg-gray-700 h-screen'>
             <Navbar />
@@ -20,5 +19,3 @@ const contactFaculty = () => {
         </div>
     )
 }
-
-export default contactFaculty
