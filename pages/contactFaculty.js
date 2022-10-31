@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar'
 
 export default function ContactFaculty() {
     return (
-        <div className='bg-gray-700 h-screen'>
+        <div className='bg-neutral-900 h-screen'>
             <Navbar />
-            <div className="faculty grid grid-cols-4 gap-4 place-items-center my-4">
+            <div className="faculty grid grid-cols-4 gap-4 place-items-center mt-6">
                 <FacultyCard />
                 <FacultyCard />
                 <FacultyCard />
