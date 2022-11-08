@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {useSession , signIn , signOut } from 'next-auth/react';
 import TimeTable from '../components/TimeTable';
 import TT from '../components/TT';
-
+import Landing from '../components/Landing';
 
 export default function Home() {
   const { data : session } = useSession();
@@ -37,6 +37,7 @@ export default function Home() {
         <div className='h-screen bg-neutral-900 text-gray-400 text-2xl'>
           You are not signed In
         </div>
+        <Landing />
       </div>
     )
   }

@@ -7,10 +7,9 @@ import {useSession , signIn , signOut } from 'next-auth/react';
 import SignedOut from '../components/SignedOut';
 
 
-
 export default function codeforces() {
     const { data : session } = useSession();
-
+    
 
     let codeforcesUrl = "https://codeforces.com/api/user.rating?handle=arush_panwar";
     const [data, setData] = useState([]);
