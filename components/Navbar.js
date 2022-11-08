@@ -16,11 +16,11 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-12">
-          <Link href='/'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline" href="#">Home</a></li></Link>
-          <Link href='/taskSchedular'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline" href="#">Task Schedule</a></li></Link>
-          <Link href='/'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline" href="#">Track CodeForces</a></li></Link>
-          <Link href='/aboutus'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline" href="#">About us</a></li></Link>
-          <Link href='/contactFaculty'><li><a className="text-md text-gray-400 hover:text-white no-underline" href="#" >Contact Faculty</a></li></Link>
+          <Link href='/'><li><a className="text-md text-gray-400 hover:text-amber-300" href="#">Home</a></li></Link>
+          <Link href='/taskSchedular'><li><a className="text-md text-gray-400 hover:text-amber-300" href="#">Task Schedule</a></li></Link>
+          <Link href='/codeforces'><li><a className="text-md text-gray-400 hover:text-amber-300" href="#">Track CodeForces</a></li></Link>
+          <Link href='/undermaintenance'><li><a className="text-md text-gray-400 hover:text-amber-300" href="#">About us</a></li></Link>
+          <Link href='/contactFaculty'><li><a className="text-md text-gray-400 hover:text-white" href="#" >Contact Faculty</a></li></Link>
         </ul>
         {
           !session && status !== 'authenticated' && ( // if signed in
