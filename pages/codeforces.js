@@ -1,18 +1,20 @@
-import React,{useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 
 let codeforcesUrl = "https://codeforces.com/api/user.rating?handle=arush_panwar";
 
 const codeforces = () => {
-    const [profile, setProfile] = React.useState();
-    fetch(codeforcesUrl)
-        .then(data => {
-            return data.json();
-        })
-        .then(post => {
-            // console.log(post.result[0]);
-            setProfile(post);
-        });
+    const [profile, setProfile] = React.useState({});
+    const apiGet = () => {
+        fetch(codeforcesUrl)
+            .then(data => {
+                return data.json();
+            })
+            .then(post => {
+                console.log(post.result[0]);
+                // setProfile(post.result);
+            });
+    };
 
 
     return (
