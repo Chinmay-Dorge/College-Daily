@@ -34,9 +34,9 @@ export default function Home() {
     return (
       <div className="home ">
         <Navbar />
-        <div className='h-screen bg-neutral-900 text-gray-400 text-2xl'>
+        {/* <div className='h-screen bg-neutral-900 text-gray-400 text-2xl'>
           You are not signed In
-        </div>
+        </div> */}
         <Landing />
       </div>
     )

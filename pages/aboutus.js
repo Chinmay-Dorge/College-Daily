@@ -14,7 +14,7 @@ const aboutus = () => {
             </p>
             <div className={styles.skills}>
                 <span>!!</span>
-                <span>Software Engineering Project</span>
+                <span>Work in Progress</span>
                 <span>!!</span>
             </div>
         </div>
