@@ -11,10 +11,6 @@ export default function ContactFaculty() {
                 <FacultyCard />
                 <FacultyCard />
                 <FacultyCard />
-                <FacultyCard />
-                <FacultyCard />
-                <FacultyCard />
-                <FacultyCard />
             </div>
         </div>
     )

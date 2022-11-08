@@ -4,7 +4,7 @@ import Image from 'next/image'
 const FacultyCard = () => {
   return (
     <div>
-      <div className="flex flex-col w-[300px] h-[400px] items-center justify-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-neutral-800 dark:border-neutral-800">
+      <div className="flex flex-col w-[300px] h-[400px] items-center justify-center bg-gray-900 rounded-lg border border-gray-200 shadow-md dark:bg-neutral-800 dark:border-neutral-800">
         <div className="flex flex-col items-center pb-10">
           <div className="mb-4 mt-4 w-[150px] h-[150px] rounded-full shadow-lg bg-[url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-no-repeat"></div>
           <h5 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">Vishal Krishna Singh</h5>

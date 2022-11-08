@@ -13,13 +13,19 @@ export default function Home() {
       <div className="home ">
         <Navbar />
         <div className='h-screen bg-gray-900 text-gray-400 text-2xl'>
+        <div className='flex items-center justify-center p-5'>Welcome {session.user.name} </div>
           <div className='flex items-center justify-center p-5'>TimeTable</div>
-          
           <TT />
 
-          <Link href="/taskSchedular">
-            <p> <button> Task Schedular </button> </p>
-          </Link>
+          <div className='flex justify-evenly p-10'>
+            <Link href="/taskSchedular" className=''>
+              <p> <button> Task Schedular </button> </p>
+            </Link>
+
+            <Link href="/codeforces" className=''>
+              <p> <button> Track CodeForces </button> </p>
+            </Link>
+          </div>
 
         </div>
       </div>
