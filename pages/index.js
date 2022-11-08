@@ -12,7 +12,7 @@ export default function Home() {
     return (
       <div className="home ">
         <Navbar />
-        <div className='h-screen bg-gray-900 text-gray-400 text-2xl'>
+        <div className='h-screen bg-neutral-900 text-neutral-300 text-2xl'>
         <div className='flex items-center justify-center p-5'>Welcome {session.user.name} </div>
           <div className='flex items-center justify-center p-5'>TimeTable</div>
           <TT />
