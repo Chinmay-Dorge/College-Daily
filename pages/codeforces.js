@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import axios from 'axios';
 import { da } from 'date-fns/locale';
 import UnderMaintenance from '../components/UnderMaintenance';
+import Landing from '../components/Landing';
 
 
 const codeforces = () => {
@@ -20,7 +21,9 @@ const codeforces = () => {
 
     return (
         <div>
-            <UnderMaintenance />
+            {/* <UnderMaintenance /> */}
+            {/* <Navbar /> */}
+            <Landing />
             {/* <Navbar />
             track your codeforces account.
             <button onClick={getData} className="bg-black text-white p-20">Click ME</button>
