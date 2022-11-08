@@ -3,9 +3,15 @@ import Navbar from '../components/Navbar'
 import axios from 'axios';
 import { da } from 'date-fns/locale';
 import UnderMaintenance from '../components/UnderMaintenance';
+import {useSession , signIn , signOut } from 'next-auth/react';
+import SignedOut from '../components/SignedOut';
 
 
-const codeforces = () => {
+
+export default function codeforces() {
+    const { data : session } = useSession();
+
+
     let codeforcesUrl = "https://codeforces.com/api/user.rating?handle=arush_panwar";
     const [data, setData] = useState([]);
     const getData = () => {
@@ -17,16 +23,23 @@ const codeforces = () => {
         )
     }
 
-
-    return (
-        <div>
-            <UnderMaintenance />
-            {/* <Navbar />
-            track your codeforces account.
-            <button onClick={getData} className="bg-black text-white p-20">Click ME</button>
-            {data} */}
-        </div>
-    )
+    if(session){
+        return (
+            <div>
+                <UnderMaintenance />
+                {/* <Navbar />
+                track your codeforces account.
+                <button onClick={getData} className="bg-black text-white p-20">Click ME</button>
+                {data} */}
+            </div>
+        )
+    }else{
+        return(
+            <>
+                <Navbar />
+                <SignedOut />
+            </>
+        )
+    }
+    
 }
-
-export default codeforces
