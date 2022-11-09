@@ -13,7 +13,7 @@ export default function Home() {
       <div className="home overflow-x-hidden overflow-y-hidden">
         <Navbar />
         <div className='h-screen bg-neutral-900 text-neutral-300 text-2xl'>
-        <div className='flex items-center justify-center p-5'>Welcome {session.user.name} </div>
+        <div className='flex items-center justify-center p-5'>Welcome <span class="font-extrabold">{session.user.name}</span> </div>
           <div className='flex items-center justify-center p-5'>TimeTable</div>
           <TT />
 
