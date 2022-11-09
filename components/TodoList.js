@@ -51,8 +51,8 @@ const TodoList = () => {
     return (
         <>
             <div className = {`${styles.header} ${"text-center"}`}>
-                <h3> Task Schedular </h3>
-                <button className = "btn btn-primary mt-2" onClick = {() => setModal(true)} >Create Task</button>
+                <h1 class = "text-white font-extrabold"> TASK SCHEDULER </h1>
+                <button className = "px-3 py-2 bg-neutral-50 mt-4 hover:bg-amber-300 hover:text-lg ease-in-out duration-150" onClick = {() => setModal(true)} >Create Task</button>
             </div>
             <div className = {styles.taskContainer}>
                 {taskList && taskList.map((obj , index) => <Card key={obj} taskObj = {obj} index = {index} deleteTask = {deleteTask} updateListArray = {updateListArray}/> )}

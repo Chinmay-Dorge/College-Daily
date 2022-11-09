@@ -51,12 +51,12 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
         <div className = {`${styles.cardWrapper} ${"mr-5"}`} >
             <div className = {styles.cardTop} style={{"background-color": colors[index%5].primaryColor}}></div>
             <div className = {styles.taskHolder} >
-                <span className = {styles.cardHeader} style={{"background-color": colors[index%5].secondaryColor, "border-radius": "10px"}}>{taskObj.Name}</span>
-                <p className = "mt-3">{taskObj.Description}</p>
+                <span className = {styles.cardHeader} style={{"background-color": colors[index%5].secondaryColor}}>{taskObj.Name}</span>
+                <p className = "mt-3 text-white">{taskObj.Description}</p>
 
-                <div style={{"position": "absolute", "right" : "20px", "bottom" : "20px"}}>
-                    <FontAwesomeIcon icon={faTrash} style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer"}} onClick = {handleDelete} ></FontAwesomeIcon>
-                    <FontAwesomeIcon icon = {faEdit} style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer"}} onClick = {() => setModal(true)} ></FontAwesomeIcon>
+                <div style={{"position": "absolute", "right" : "20px", "bottom" : "15px"}}>
+                    <FontAwesomeIcon icon={faTrash} style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer", "margin" : "0px 5px"}} onClick = {handleDelete} ></FontAwesomeIcon>
+                    <FontAwesomeIcon icon = {faEdit} style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer", "margin" : "0px 5px"}} onClick = {() => setModal(true)} ></FontAwesomeIcon>
                 </div>
         </div>
         <EditTask modal = {modal} toggle = {toggle} updateTask = {updateTask} taskObj = {taskObj}/>

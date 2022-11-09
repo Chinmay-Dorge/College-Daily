@@ -6,7 +6,7 @@ const undermaintenance = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex bg-gray-900 text-white">
+            <div className="flex bg-neutral-900 text-white">
                 <div className='p-[200px]'>
                     <IoBuild className="text-9xl" />
                     <h1 className='text-[60px] font-bold'>Down for Maintenance</h1>
