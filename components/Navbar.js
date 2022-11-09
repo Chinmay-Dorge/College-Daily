@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link href='/'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#">Home</a></li></Link>
           <Link href='/taskSchedular'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#">Task Schedule</a></li></Link>
           <Link href='/codeforces'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#">Track CodeForces</a></li></Link>
-          <Link href='/undermaintenance'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#">About us</a></li></Link>
+          <Link href='/aboutus'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#">About us</a></li></Link>
           <Link href='/contactFaculty'><li><a className="text-md text-gray-400 hover:text-amber-300 no-underline hover:text-lg ease-in-out duration-200" href="#" >Contact Faculty</a></li></Link>
         </ul>
         {
