@@ -22,7 +22,7 @@ export default function Home() {
               <p> <button> Task Schedular </button> </p>
             </Link>
 
-            <Link href="/undermaintenance" className=''>
+            <Link href="/codeforces" className=''>
               <p> <button> Track CodeForces </button> </p>
             </Link>
           </div>
