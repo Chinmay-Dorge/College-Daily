@@ -22,7 +22,7 @@ export default function Home() {
               <p> <button> Task Schedular </button> </p>
             </Link>
 
-            <Link href="/codeforces" className=''>
+            <Link href="https://college-daily-codeforces.netlify.app/" target="_blank" className=''>
               <p> <button> Track CodeForces </button> </p>
             </Link>
           </div>
