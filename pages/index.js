@@ -8,13 +8,17 @@ import Landing from '../components/Landing';
 export default function Home() {
   const { data : session } = useSession();
 
+ 
+
   if(session){
+    let name = session.user.name.split(' ')[0];
+    console.log(name);
     return (
       <div className="home overflow-x-hidden overflow-y-hidden">
         <Navbar />
         <div className='h-screen bg-neutral-900 text-neutral-300 text-2xl'>
-        <div className='flex items-center justify-center p-5'>Welcome <span class="font-extrabold">{session.user.name}</span> </div>
-          <div className='flex items-center justify-center p-5'>TimeTable</div>
+        <div className='flex items-center justify-center p-5'>Welcome {name}</div>
+          <div className='flex items-center justify-center p-2'>TimeTable</div>
           <TT />
 
           <div className='flex justify-evenly p-10'>
