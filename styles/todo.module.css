@@ -6,8 +6,8 @@
 }
   
 .cardContainer{
-    height: 300px;
-    width: 300px;
+    height: 800px;
+    width: 200px;
     /* box-shadow: 0px 3px 50px #535353; */
 }
   
@@ -17,7 +17,7 @@
     box-shadow: 0px 3px 50px #474747 ;
     display: flex;
     flex-direction: column;
-    margin: 0px 40px 0px 40px;
+    margin: 10px 40px 20px 40px;
 }
   
 .cardTop{
@@ -26,20 +26,23 @@
 }
   
 .taskHolder{
-    width: 100%;
+    width: 90%;
     height: 98%;
     padding: 10px 20px;
     display : flex;
+    align-items: center;
     flex-direction: column;
+    
     position: relative;
 }
   
 .cardHeader{
     margin: 10px 0px;
     width: fit-content;
-    padding: 4px 10px 1px 1px ;
-    text-align:left; 
-    text-indent: 8px;
+    padding: 1px 20px 8px 10px ;
+   align-items: center;
+    text-align:center; 
+    text-indent: 5px;
 }
   
 .taskContainer{
@@ -48,5 +51,5 @@
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(38,38,38);
-    padding : 40px 100px;
+    padding : 40px 200px;
 }
